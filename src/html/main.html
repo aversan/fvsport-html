@@ -1,0 +1,15 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  {% include '_part/main/main-hero.html' %}
+  {% include '_part/main/categories.html' %}
+  {% include '_part/main/products.html' %}
+  {% include '_part/main/subscribe.html' %}
+  {% include '_part/main/advantages.html' %}
+  {% include '_part/main/main-seo.html' %}
+{% endblock %}
+
+
+{% block modal %}
+  {% include 'shared/modal-add-to-cart.html' %}
+{% endblock %}

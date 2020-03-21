@@ -1,0 +1,120 @@
+{%
+set items = [
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+}
+]
+%}
+
+<div class="modal modal-add-to-card fade" id="modal-add-to-card"  tabindex="-1" role="dialog" aria-labelledby="modal-add-to-card" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header pb-3 pb-md-4 mb-3 mb-md-4 px-4 px-md-4_5 modal-border-bottom position-relative">
+        <h6 class="modal-title h6 font-weight-semibold text-uppercase mb-0">В корзину</h6>
+        <button class="btn btn-only-icon modal-close text-gray my-n2 mr-n3" type="button" data-dismiss="modal" aria-label="Закрыть">
+          <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path d="M16.97.708L.708 16.97 0 16.264 16.263.001z"/><path d="M.707 0l16.264 16.263-.708.707L0 .707z"/></svg>
+        </button>
+      </div>
+      <div class="modal-body overflow-hidden pt-0 px-4 px-md-4_5 pb-4 pb-md-4_5">
+        <div class="d-flex">
+          <picture class="col-4 mr-2 mr-md-4_75 px-0 text-center">
+            <!--source srcset="../images/main-product-{{ item.img }}.webp" type="image/webp"-->
+            <source srcset="../images/modal-product-embed-01.jpg" type="image/jpg">
+            <img
+              class="img-fluid"
+              loading="lazy"
+              src="../images/main-product-01.jpg"
+              alt=""
+              width="180"
+              height="272"
+            >
+          </picture>
+          <div class="flex-grow-1 d-flex flex-column">
+            <h6 class="h6 font-weight-semibold text-uppercase modal-product-title mb-0">Alo yoga</h6>
+            <p class="my-2 modal-product-text">Свитшот Double Take White</p>
+            <strong class="my-2 h5 font-weight-semibold text-nowrap modal-product-price price">7 900 <span class="ruble">P</span></strong>
+            <ul class="list-unstyled modal-product-list text-muted my-2">
+              <li>Код товара - 587-709</li>
+              <li>Артикул товара: w9254r</li>
+            </ul>
+            <div class="mx-n1 pt-md-1">
+              <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light btn-responsive">XS</button>
+              <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light btn-responsive">S</button>
+              <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light btn-responsive">M</button>
+            </div>
+            <div class="flex-grow-1"></div>
+            <div class="mt-4 mt-md-4_5">
+              <button class="btn btn-primary min-w-180px">Купить</button>
+            </div>
+          </div>
+        </div>
+        <div class="border-top my-3 my-md-4"></div>
+        <section>
+          <h6 class="h6 font-weight-semibold text-uppercase mb-0">Завершите образ!</h6>
+          <div class="mx-n4 mx-md-n4_5 pt-4 pt-md-4_5 pb-2 mb-n4 mb-md-n4_5">
+            <div class="swiper-container js-swiper-container-additional-product main-category-swiper px-4 px-md-4_5">
+              <div class="swiper-wrapper">
+                {% for item in items %}
+                <div class="swiper-slide">
+                  <article class="card product-card product-card-small mx-auto w-100 bg-transparent hoverable">
+                    <a href="">
+                      <div class="card-img-wrapper position-relative">
+                        <picture>
+                          <!--source srcset="../images/main-product-{{ item.img }}.webp" type="image/webp"-->
+                          <source srcset="../images/main-product-{{ item.img }}.jpg" type="image/jpg">
+                          <img
+                            class="card-img-top"
+                            loading="lazy"
+                            src="../images/main-product-{{ item.img }}.jpg"
+                            alt=""
+                          >
+                        </picture>
+                      </div>
+                    </a>
+                    <div class="card-body px-0 py-2">
+                      <h4 class="typo-sm text-uppercase card-title font-weight-semibold mb-2">
+                        <a href="">
+                          {{ item.title }}
+                        </a>
+                      </h4>
+                      <p class="typo-sm card-text mb-1">
+                        <a class="" href="">
+                          {{ item.text }}
+                        </a>
+                      </p>
+                      <strong class="typo-sm font-weight-semibold text-nowrap card-price price mb-0">{{ item.price }} <span class="ruble">P</span></strong>
+                    </div>
+                  </article>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

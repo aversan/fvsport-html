@@ -1,0 +1,35 @@
+.font-weight-semibold {
+  font-weight: $font-weight-semibold !important;
+}
+
+a.text-muted {
+  @include hover-focus() {
+    color: $primary-70 !important;
+  }
+}
+
+.text-primary-40 {
+  color: $primary-40 !important;
+}
+
+a.text-primary-40 {
+  @include hover-focus() {
+    color: $primary-70 !important;
+  }
+}
+
+.text-primary-70 {
+  color: $primary-70 !important;
+}
+
+a.text-primary-70 {
+  @include hover-focus() {
+    color: $primary-70 !important;
+  }
+}
+
+a.text-white-50 {
+  @include hover-focus() {
+    color: $white !important;
+  }
+}

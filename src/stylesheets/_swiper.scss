@@ -1,0 +1,38 @@
+.main-hero-swiper {
+  .swiper-pagination {
+    position: absolute;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include media-breakpoint-down('md') {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+ }
+
+  .swiper-pagination-bullet {
+    width: .625rem;
+    height: .625rem;
+    display: inline-block;
+    border-radius: 1rem;
+    background: transparent;
+    border: 1px solid $white;
+    cursor: pointer;
+    margin-left: .875rem;
+
+    &-active {
+      background-color: $white;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+//.dropdown-menu {
+//  border-top-left-radius: 0;
+//  border-top-right-radius: 0;
+//
+//  .dropdown-item:first-child {
+//    border-top-left-radius: 0;
+//    border-top-right-radius: 0;
+//  }
+//
+//  & > li > .dropdown-item {
+//    border-radius: 0;
+//  }
+//
+//  & > li:last-child > .dropdown-item {
+//    border-bottom-left-radius: 0;
+//    border-bottom-right-radius: 0;
+//  }
+//}
+//
+//.dropdown-menu-light {
+//  color: $dropdown-light-color;
+//  background-color: $dropdown-light-bg;
+//  border-color: $dropdown-light-border-color;
+//
+//  .dropdown-item {
+//    color: $dropdown-link-light-color;
+//
+//    @include hover-focus() {
+//      color: $dropdown-link-light-hover-color;
+//      @include gradient-bg($dropdown-link-light-hover-bg);
+//    }
+//
+//    &.active,
+//    &:active {
+//      color: $dropdown-link-light-active-color;
+//      @include gradient-bg($dropdown-link-light-active-bg);
+//    }
+//
+//    &.disabled,
+//    &:disabled {
+//      background-color: transparent;
+//    }
+//  }
+//}
+//
+//.dropdown-toggle::after {
+//  width: .75rem;
+//  height: .4735rem;
+//  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 7' width='12' height='7' fill='%23919191' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 0L6 4.327 10.59 0 12 1.332 6 7 0 1.332z' fill-rule='evenodd'/%3E%3C/svg%3E");
+//  background-position: center center;
+//  background-repeat: no-repeat;
+//
+//  background-size: contain;
+//  border: 0;
+//  @include transition($transition-base);
+//
+//  .show > &,
+//  .open > & {
+//    transform: rotate(-180deg);
+//  }
+//}

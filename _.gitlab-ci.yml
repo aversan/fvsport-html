@@ -1,0 +1,17 @@
+stages:
+    - production
+deploy:
+  stage: production
+  tags:
+    - node
+  script:
+    - |
+        sudo -i -u $REMOTE_USER bash <<-EOF 
+        cd $REMOTE_PATH 
+        git pull origin master 
+        npm install 
+        gulp build 
+        EOF
+  only:
+    refs:
+      - master

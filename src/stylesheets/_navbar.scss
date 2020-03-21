@@ -1,0 +1,142 @@
+// header navbar
+
+.header-navbar {
+  height: $header-navbar-height;
+  @include font-size(.875rem);
+  //max-width: 1280px;
+  z-index: 10;
+  //grid-template-columns: auto auto 1fr 233px 1fr auto auto auto;
+  //grid-template-rows: 4.1875rem;
+  //justify-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    bottom: 0;
+    background-color: $border-color;
+  }
+
+  //.navbar-brand {
+  //  position: absolute !important;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%, -50%);
+  //}
+
+  .navbar-nav-scroll {
+    max-width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    margin-top: .5rem;
+
+    .navbar-nav {
+      padding-bottom: 2rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .navbar-nav.text-uppercase {
+    letter-spacing: 1.5px;
+  }
+
+  .nav-link {
+    &.active {
+      position: relative;
+      cursor: default;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: calc(0.9375rem - 3px);
+        right:calc(0.9375rem - 3px);
+        bottom: 0;
+        height: 1px;
+        background-color: theme-color("primary");
+      }
+    }
+
+    //&.disabled {
+    //  color: $gray-450;
+    //}
+    //
+    //&.disabled.active::before {
+    //  background-color: $gray-450;
+    //}
+  }
+}
+
+
+// mobile header
+
+.header-navbar-mobile {
+  height: $header-navbar-height-mobile;
+  z-index: 998;
+  transition: $transition-base;
+
+  &.position-sticky {
+    top: 0;
+
+    &.header-down {
+      transform: translateY(0);
+    }
+
+    &.header-up {
+      transform: translateY(-100%);
+    }
+  }
+
+  .navbar-brand {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar-toggler,
+  .navbar-cart {
+    width: $header-navbar-height-mobile;
+    height: $header-navbar-height-mobile;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar-toggler {
+    left: calc(#{$container-padding-x} - 1rem);
+
+    @include media-breakpoint-down('sm') {
+      left: calc(#{$container-padding-x-sm} - 1.125rem);
+    }
+  }
+
+  .navbar-cart {
+    right: calc(#{$container-padding-x} - 1rem);
+
+    @include media-breakpoint-down('sm') {
+      right: calc(#{$container-padding-x-sm} - 1.425rem);
+    }
+  }
+}
+
+
+// header menu toggler
+
+.navbar-toggler {
+  &:focus {
+    outline: none;
+  }
+
+  .hamburger {
+    transform: translateY(-6px);
+
+    @include media-breakpoint-down('xs') {
+      transform: translateY(-6px) scale(1.2);
+    }
+  }
+}
+

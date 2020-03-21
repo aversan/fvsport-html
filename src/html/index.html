@@ -1,0 +1,17 @@
+{% extends 'layouts/application.html' %}
+
+{% macro page(name, new=false) %}
+<p><a href="{{name}}.html" target="_blank">{{name}}{{ '<sup class="text-danger"> new!</sup>' | safe if new else '' }}</a></p>
+{% endmacro %}
+
+{%
+	set title = ''
+%}
+
+{% block content %}
+<div class="container">
+    <div class="section-divider"></div>
+    {{ page('main') }}
+    <div class="section-divider"></div>
+</div>
+{% endblock %}

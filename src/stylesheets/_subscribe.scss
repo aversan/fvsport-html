@@ -1,0 +1,23 @@
+.subscribe-section {
+  .form-control,
+  .btn {
+    @include media-breakpoint-down('sm') {
+      max-width: 13.125rem;
+    }
+  }
+
+  .h3 {
+    @include media-breakpoint-down('sm') {
+      @include font-size($h6-font-size);
+      line-height: 1.25;
+    }
+  }
+
+  p {
+    @include media-breakpoint-down('sm') {
+      @include font-size($font-size-sm);
+      line-height: 1.142857;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+.h1.text-uppercase,
+.h2.text-uppercase,
+.h3.text-uppercase,
+.h4.text-uppercase {
+  letter-spacing: 1.5px;
+}
+
+.h5.text-uppercase,
+.h6.text-uppercase {
+  letter-spacing: 2.5px;
+}
+
+.typo-lg {
+  font-size: $font-size-lg;
+}
+
+.typo-sm {
+  font-size: $font-size-sm;
+  letter-spacing: .5px;
+
+  &.text-uppercase {
+    letter-spacing: 1.5px;
+  }
+}
+
+.typo-xs {
+  font-size: $font-size-xs;
+}
+
+.line-height-base {
+  line-height: 1.25rem; // 20px
+}

@@ -1,0 +1,22 @@
+.footer {
+  @include media-breakpoint-down('sm') {
+    @include font-size($font-size-sm);
+    line-height: 1.14285;
+  }
+
+  .h5 {
+    @include media-breakpoint-down('sm') {
+      @include font-size($h6-font-size);
+    }
+  }
+
+  &-contact {
+    p {
+      line-height: 1.625;
+
+      @include media-breakpoint-down('sm') {
+        line-height: 1.14285;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.col-2_5,
+.col-sm-2_5,
+.col-md-2_5,
+.col-lg-2_5,
+.col-lx-2_5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.col-sm-2_5 {
+  @include media-breakpoint-up('sm') {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.col-md-2_5 {
+  @include media-breakpoint-up('md') {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.col-lg-2_5 {
+  @include media-breakpoint-up('lg') {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.col-xl-2_5 {
+  @include media-breakpoint-up('xl') {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.container,
+.container-fluid {
+  max-width: 1280px;
+  padding-left: $container-padding-x;
+  padding-right: $container-padding-x;
+
+  @include media-breakpoint-down('sm') {
+    padding-left: $container-padding-x-sm;
+    padding-right: $container-padding-x-sm;
+  }
+}

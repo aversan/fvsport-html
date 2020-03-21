@@ -1,0 +1,50 @@
+{%
+set items = [
+{
+img: '01',
+title: 'Свитшоты'
+},
+{
+img: '03',
+title: 'Топы'
+},
+{
+img: '02',
+title: 'Легинсы'
+}
+]
+%}
+
+<section class="category-section position-relative">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-10 mx-md-auto">
+        <div class="mx-n4 mx-md-0 pt-4 pt-md-4_5 pb-3 pb-md-4">
+          <div class="swiper-container js-swiper-container-main-category px-4 px-md-0 main-category-swiper">
+            <div class="swiper-wrapper">
+              {% for item in items %}
+              <div class="swiper-slide mr-3">
+                <article class="card category-card mx-auto text-center w-100">
+                  <picture>
+                    <!--source srcset="../images/main-category-{{ item.img }}.webp" type="image/webp"-->
+                    <source srcset="../images/main-category-{{ item.img }}.jpg" type="image/jpg">
+                    <img
+                      class="card-img-top img-fluid"
+                      loading="lazy"
+                      src="../images/main-category-{{ item.img }}.jpg"
+                      alt=""
+                    >
+                  </picture>
+                  <div class="card-body px-0 py-3 py-md-4">
+                    <h4 class="h5 text-uppercase card-title font-weight-semibold"><a class="stretched-link" href="">{{ item.title }}</a></h4>
+                  </div>
+                </article>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

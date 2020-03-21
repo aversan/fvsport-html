@@ -1,0 +1,37 @@
+<div class="swiper-container js-swiper-container-main-hero main-hero-swiper">
+  <div class="swiper-wrapper">
+    {% for i in [1, 2, 3, 4] %}
+    <div class="swiper-slide">
+      <section class="jumbotron main-hero mb-0 d-flex jumbotron-fluid overflow-hidden py-0 text-white position-relative">
+        <picture>
+          <!--source srcset="../images/main-hero-01@2x.webp" type="image/webp"-->
+          <source srcset="../images/main-hero-01@2x.jpg" type="image/jpg">
+          <img
+            class="cover-object"
+            loading="lazy"
+            src="../images/main-hero-01@2x.jpg"
+            alt=""
+          >
+        </picture>
+        <div class="jumbotron-image-overlay">
+          <div class="container-fluid d-flex flex-column h-100">
+            <div class="row h-100 py-4_25 py-md-7">
+              <div class="col-6">
+                <h3 class="display-3 mb-1_5 mb-md-4 text-uppercase">Сияйте ярче звезд</h3>
+                <p class="h3 text-uppercase">скидка 30% на комплект beyond yoga</p>
+              </div>
+              <div class="col-12 d-none d-md-block"></div>
+              <div class="col-12 col-md-6 position-static align-self-end">
+                <div class="mt-5_5 text-center text-md-left">
+                  <a class="btn btn-white btn-lg btn-responsive stretched-link px-4 text-uppercase" href="#" role="button">Смотреть</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination d-none d-md-flex"></div>
+</div>

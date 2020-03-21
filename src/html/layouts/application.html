@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  {% include "shared/app-icons.html" %}
+  {% block head %}{% endblock %}
+</head>
+<body class="d-flex flex-column min-vh-100 {{ bodyClass }}">
+  <div class="flex-grow-1">
+    {% block header %}
+      {% include "shared/header-navbar.html" %}
+      {% include "shared/header-navbar-mobile.html" %}
+    {% endblock %}
+    {% include "shared/sidebar.html" %}
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+  </div>
+  {% block footer %}
+    {% include "shared/footer.html" %}
+  {% endblock %}
+
+  {% block modal %}
+  {% endblock %}
+
+  {% block javascript %}
+    <script src="javascripts/modernizr.js"></script>
+    <script src="javascripts/app.js"></script>
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,94 @@
+{%
+set items = [
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+},
+{
+img: '01',
+title: 'Alo Yoga',
+price: '7 900',
+text: 'Худи Eternal Scarlett'
+}
+]
+%}
+
+<section class="product-section bg-light">
+  <div class="container-fluid">
+    <h3 class="h3 product-section-title text-uppercase font-weight-semibold text-center pt-4_25 pt-md-5">
+      <a href="">Новинки</a>
+    </h3>
+    <div class="pt-4 pt-md-4_5 pb-3 pb-md-4 d-flex row-cols-1 row-cols-sm-2 row-cols-lg-4 mx-n2 flex-wrap">
+      {% for item in items %}
+      <div class="px-2 d-flex">
+        <article class="card product-card mx-auto w-100 bg-transparent mb-2 mb-md-0 hoverable">
+          <a href="">
+            <div class="card-img-wrapper position-relative">
+              <picture>
+                <!--source srcset="../images/main-product-{{ item.img }}.webp" type="image/webp"-->
+                <source srcset="../images/main-product-{{ item.img }}.jpg" type="image/jpg">
+                <img
+                  class="card-img-top img-fluid"
+                  loading="lazy"
+                  src="../images/main-product-{{ item.img }}.jpg"
+                  alt=""
+                >
+              </picture>
+              <div class="card-img-overlay py-4_5 px-0 d-flex align-items-end overflow-hidden">
+                <div class="mx-auto d-flex flex-nowrap card-actions">
+                  <button class="btn btn-primary-50 font-weight-light card-action btn-responsive">XS</button>
+                  <button class="btn btn-primary-50 font-weight-light card-action btn-responsive">SM</button>
+                  <button class="btn btn-primary-50 font-weight-light card-action btn-responsive">M</button>
+                  <button class="btn btn-primary-50 font-weight-light card-action btn-responsive">L</button>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card-body px-0 py-2 py-md-3">
+            <div class="d-flex mb-1 mb-md-2">
+              <div class="flex-grow-1">
+                <h4 class="h6 text-uppercase card-title font-weight-semibold mb-0">
+                  <a href="">
+                    {{ item.title }}
+                  </a>
+                </h4>
+              </div>
+              <strong class="h6 font-weight-semibold text-nowrap card-price price ml-3 align-self-end">{{ item.price }} <span class="ruble">P</span></strong>
+            </div>
+            <div class="card-text-wrapper d-flex flex-md-column">
+              <p class="card-text mb-0 flex-grow-1">
+                <a class="" href="">
+                  {{ item.text }}
+                </a>
+              </p>
+              <div class="mx-n1 pt-md-1 card-actions">
+                <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light card-action btn-responsive">XS</button>
+                <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light card-action btn-responsive">S</button>
+                <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light card-action btn-responsive">M</button>
+                <button class="btn btn-sm btn-outline-secondary m-1 btn-quad font-weight-light card-action btn-responsive">L</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+    <footer class="product-section-footer text-center pb-4_5">
+      <a class="btn btn-dark text-uppercase btn-lg btn-responsive" href="">Смотреть все</a>
+    </footer>
+  </div>
+</section>

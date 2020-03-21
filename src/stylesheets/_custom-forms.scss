@@ -1,0 +1,65 @@
+//// control
+//
+//.custom-control {
+//  min-height: 1.5rem;
+//}
+//
+//.custom-control-label:empty::before,
+//.custom-control-label:empty::after {
+//  top: 0;
+//}
+//
+//.custom-control-input {
+//  &:checked ~ .custom-control-label::before {
+//    border-color: theme-color("primary");
+//  }
+//
+//  &:disabled:checked ~ .custom-control-label::before {
+//    border-color: $gray-450;
+//  }
+//
+//  &[disabled] ~ .custom-control-label::before,
+//  &:disabled ~ .custom-control-label::before {
+//    border-color: $gray-250;
+//  }
+//}
+//
+//
+//// checkbox
+//
+//.custom-checkbox {
+//  .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+//    background-color: $white;
+//    border-color: $gray-450;
+//  }
+//
+//  .custom-control-input:disabled:indeterminate ~ .custom-control-label::after {
+//    background-image: escape-svg($custom-checkbox-indicator-disable-icon-indeterminate);
+//  }
+//
+//  .custom-control-input ~ .custom-control-label::after {
+//    transform: scale(1.1);
+//  }
+//
+//  .custom-control-input:indeterminate ~ .custom-control-label::after {
+//    transform: scale(1.2);
+//  }
+//}
+//
+//
+//// select
+//
+//.custom-select-light {
+//  color: $body-color;
+//  background-color: theme-color("light");
+//  border-color: theme-color("light");
+//
+//  &:focus {
+//    border-color: theme-color("light");
+//
+//    &::-ms-value {
+//      color: $body-color;
+//      background-color: theme-color("light");
+//    }
+//  }
+//}

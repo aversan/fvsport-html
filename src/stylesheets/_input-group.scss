@@ -1,0 +1,37 @@
+.footer-subscribe {
+  .form-control {
+    max-width: 16.5rem;
+
+    @include media-breakpoint-down('xs') {
+      max-width: 100%;
+    }
+  }
+
+  .btn {
+    min-width: 11.25rem;
+
+
+    @include media-breakpoint-down('xs') {
+      min-width: 0;
+    }
+  }
+
+  .btn-outline-primary {
+    @include hover-focus() {
+      background: $white;
+      color: $primary-70;
+    }
+  }
+}
+
+.input-group-search {
+  .form-control {
+    padding-right: $input-height;
+  }
+
+  .input-group-append {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+  }
+}

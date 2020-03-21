@@ -1,0 +1,106 @@
+.btn {
+  @media screen and (prefers-reduced-motion: reduce) {
+    & {
+      transition: none;
+    }
+  }
+
+  &.text-uppercase {
+    @include font-size(.875rem);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+  }
+}
+
+
+// disabled button
+
+.btn.disabled,
+.btn:disabled {
+  background-color: $gray-450;
+  border-color: $gray-450;
+  cursor: default;
+}
+
+
+.btn-quad {
+  width: $input-height;
+  height: $input-height;
+  min-width: $input-height;
+  padding: 0;
+
+  &.btn-sm {
+    width: $input-height-sm;
+    height: $input-height-sm;
+    min-width: $input-height-sm;
+  }
+
+  &.btn-xs {
+    width: $input-height-xs;
+    height: $input-height-xs;
+    min-width: $input-height-xs;
+  }
+}
+
+
+.btn-only-icon {
+  @extend .btn-quad;
+  position: relative;
+
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+}
+
+.btn-responsive {
+  &.btn-lg {
+    @include media-breakpoint-down('sm') {
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
+  }
+
+  &.btn-sm {
+    @include media-breakpoint-down('sm') {
+      @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+    }
+  }
+}
+
+
+.btn-dark {
+  @include hover {
+    background-color: $gray-700;
+    color: $white;
+  }
+}
+
+
+.btn-primary-50 {
+  background-color: $primary-50;
+  color: $white;
+
+  @include hover {
+    background-color: $primary-30;
+    color: $white;
+  }
+}
+
+
+.btn-outline-secondary {
+  color: $black;
+}
+
+
+// white button
+
+//.btn-white {
+//  @include button-variant($white, $white, $gray-50, $gray-50, $gray-50, $gray-50);
+//}

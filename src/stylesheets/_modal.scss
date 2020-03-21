@@ -1,0 +1,28 @@
+.modal-border-bottom {
+  &.modal-header::before {
+    content: '';
+    height: 1px;
+    left: 1.875rem;
+    right: 1.875rem;
+    bottom: 0;
+    background-color: $border-color;
+    position: absolute;
+
+    @include media-breakpoint-down('md') {
+      left: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+}
+
+.modal-add-to-card {
+  .modal-product-title,
+  .modal-product-text,
+  .modal-product-price,
+  .modal-product-list {
+      @include media-breakpoint-down('md') {
+        @include font-size($font-size-sm);
+        line-height: 1.142857;
+      }
+  }
+}

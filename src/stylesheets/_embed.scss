@@ -1,0 +1,5 @@
+.modal-product-embed {
+  &::before {
+    padding-top: percentage(180 / 272);
+  }
+}
