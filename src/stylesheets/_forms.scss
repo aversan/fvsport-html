@@ -58,6 +58,18 @@ select.form-control-alt {
   }
 }
 
+.col-form-label-responsive {
+  &.col-form-label-lg {
+    @include media-breakpoint-down('sm') {
+      padding-top: add($input-padding-y, $input-border-width);
+      padding-bottom: add($input-padding-y, $input-border-width);
+      @include font-size($input-font-size);
+      line-height: $input-line-height;
+    }
+  }
+}
+
+
 ///*** iPhone and iOS Form Input Zoom Fixes ***/
 ///* Fix Input Zoom on devices older than iPhone 5: */
 //@media screen and (device-aspect-ratio: 2/3) {

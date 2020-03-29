@@ -39,7 +39,7 @@ $grays: map-merge(
 );
 
 //$blue:    #007bff !default;
-//$indigo:  #6610f2 !default;
+$indigo:  #5B40F5;
 //$purple:  #6f42c1 !default;
 //$pink:    #e83e8c !default;
 $red:     #dc3545;
@@ -54,7 +54,7 @@ $colors: ();
 $colors: map-merge(
     (
       //"blue":       $blue,
-      //"indigo":     $indigo,
+      "indigo":     $indigo,
       //"purple":     $purple,
       //"pink":       $pink,
       "red":        $red,
@@ -96,6 +96,7 @@ $theme-colors: map-merge(
       //"warning":    $warning,
       //"danger":     $danger,
       //"light":      $light,
+      "indigo":     $indigo,
       "white":      $white,
       "dark":       $dark,
     ),
@@ -283,7 +284,7 @@ $border-color:                $gray-450;
 //$caret-spacing:               $caret-width * .85 !default;
 
 $transition-base:             all .2s ease-in-out;
-$transition-fade:             opacity .15s linear;
+$transition-fade:             opacity .2s linear;
 //$transition-collapse:         height .35s ease;
 
 $embed-responsive-aspect-ratios: ();
@@ -539,7 +540,7 @@ $input-border-width:                    $input-btn-border-width;
 //$input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
 $input-placeholder-color:               $primary-50;
-//$input-plaintext-color:                 $body-color;
+$input-plaintext-color:                 $body-color;
 
 $input-height-border:                   $input-border-width * 2;
 
@@ -564,27 +565,27 @@ $input-height-lg:                       add($input-line-height-lg * 1em, add($in
 //$form-check-inline-input-margin-x:      .3125rem !default;
 
 //$form-grid-gutter-width:                10px !default;
-//$form-group-margin-bottom:              1.25rem;
+$form-group-margin-bottom:              1.25rem;
 
 //$input-group-addon-color:               rgba($black, .5);
 //$input-group-addon-bg:                  transparent;
 //$input-group-addon-border-color:        transparent;
 
-//$custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+$custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-//$custom-control-gutter:                 .625rem;
-//$custom-control-spacer-x:               .9375rem;
-//$custom-control-cursor:                 null;
+$custom-control-gutter:                 .625rem;
+$custom-control-spacer-x:               .9375rem;
+$custom-control-cursor:                 null;
 
-//$custom-control-indicator-size:         1.45rem;
-//$custom-control-indicator-bg:           $input-bg;
+$custom-control-indicator-size:         .875rem;
+$custom-control-indicator-bg:           $input-bg;
 
-//$custom-control-indicator-bg-size:      50% 50%;
+$custom-control-indicator-bg-size:      50% 50%;
 //$custom-control-indicator-box-shadow:   $input-box-shadow;
-//$custom-control-indicator-border-color: $gray-450;
-//$custom-control-indicator-border-width: $input-border-width;
+$custom-control-indicator-border-color: $primary-40;
+$custom-control-indicator-border-width: $input-border-width;
 
-//$custom-control-label-color:            null;
+$custom-control-label-color:            null;
 
 //$custom-control-indicator-disabled-bg:          $gray-100;
 //$custom-control-label-disabled-color:           $gray-400;
@@ -816,7 +817,7 @@ $header-navbar-height-mobile: 3.75rem; // 60px
 // Dropdown menu container and contents.
 
 $dropdown-min-width:                100%;
-$dropdown-padding-y:                0;
+$dropdown-padding-y:                .5rem;
 $dropdown-spacer:                   0;
 $dropdown-font-size:                $font-size-sm;
 $dropdown-color:                    $body-color;
@@ -838,8 +839,8 @@ $dropdown-link-active-bg:           $gray-100;
 
 //$dropdown-link-disabled-color:      $gray-600 !default;
 
-$dropdown-item-padding-y:           .625rem;
-$dropdown-item-padding-x:           1.25rem;
+$dropdown-item-padding-y:           .5rem;
+$dropdown-item-padding-x:           1rem;
 
 //$dropdown-header-color:             $gray-600 !default;
 
@@ -1040,7 +1041,7 @@ $modal-header-padding:              $modal-header-padding-y $modal-header-paddin
 
 //$modal-xl:                          1140px;
 $modal-lg:                          700px;
-//$modal-md:                          540px;
+$modal-md:                          500px;
 //$modal-sm:                          300px;
 $modal-fade-transform:              translate(0, -50px);
 $modal-show-transform:              none;

@@ -1,0 +1,93 @@
+html .autofill-result  {
+  position: absolute;
+  background: var(--white);
+  z-index: 1001;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid $gray-200 !important;
+    background-color: transparent !important;
+  }
+
+  .item-autofill {
+    position: relative;
+    padding: 5px 10px;
+    width: 100%;
+
+    &.selected {
+      background-color: $gray-100;
+    }
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      padding-bottom: 10px;
+    }
+
+    &.show-all-autofill-container {
+      padding-top: 10px;
+
+      &.selected {
+        background-color: transparent;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &::after {
+        @extend .stretched-link;
+      }
+    }
+  }
+
+  .img-autofill {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+
+  .text-autofill {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    color: var(--primary);
+  }
+
+  .highlight {
+    font-size: inherit;
+    font-weight: 600;
+  }
+
+  .show-all-autofill {
+    @extend .text-indigo;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}
+
+html .autofill-clear {
+  clear: both;
+}
+
+html .autofill-loading {
+  background-image: url("/wa-content/img/loading16.gif");
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  position: absolute;
+}

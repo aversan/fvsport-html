@@ -1,0 +1,14 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <p><a data-toggle="modal" href="#modal-add-to-cart">add-to-cart</a></p>
+  <p><a data-toggle="modal" href="#modal-register">register</a></p>
+  <p><a data-toggle="modal" href="#modal-login">login</a></p>
+{% endblock %}
+
+
+{% block modal %}
+  {% include 'shared/modal-add-to-cart.html' %}
+  {% include 'shared/modal-register.html' %}
+  {% include 'shared/modal-login.html' %}
+{% endblock %}

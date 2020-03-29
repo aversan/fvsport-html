@@ -68,6 +68,18 @@
     //  background-color: $gray-450;
     //}
   }
+
+  .navbar-search {
+    width: 20px;
+    margin-right: 0;
+    clip: rect(0,0,0,0);
+    @include transition($transition-base);
+  }
+
+  .navbar-search.expand-search {
+    width: 175px;
+    margin-right: -155px;
+  }
 }
 
 

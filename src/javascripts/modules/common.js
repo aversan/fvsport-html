@@ -209,7 +209,7 @@ $(() => {
   // });
 
 
-  (function(){
+(function(){
     let $menu = $('.js-menu');
 
     $menu.menuAim({
@@ -255,5 +255,37 @@ $(() => {
       // $submenu.css("display", "none");
       $row.children('.nav-link').removeClass('show-submenu');
     }
+  })();
+
+  (function(){
+    let $searchGroup = $('.js-search-input');
+    let $wrapper = $searchGroup.parent('.js-search-wrapper');
+    let $input = $searchGroup.find('.form-control');
+
+    function init() {
+      if (!!$input.val()) {
+        $searchGroup.addClass('expand-search');
+        $wrapper.addClass('expand-search');
+      } else {
+        $searchGroup.removeClass('expand-search');
+        $wrapper.removeClass('expand-search');
+      }
+    }
+
+    $input.focus(function(){
+      $searchGroup.addClass('expand-search');
+      $wrapper.addClass('expand-search');
+    });
+
+    $input.blur(function(){
+      if (!!$input.val()) {
+        return;
+      }
+
+      $searchGroup.removeClass('expand-search');
+      $wrapper.removeClass('expand-search');
+    });
+
+    init();
   })();
 });

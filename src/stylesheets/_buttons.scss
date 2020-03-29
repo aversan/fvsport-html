@@ -20,24 +20,25 @@
 .btn:disabled {
   background-color: $gray-450;
   border-color: $gray-450;
+  color: $white;
   cursor: default;
 }
 
 
 .btn-quad {
-  width: $input-height;
+  width: auto;
   height: $input-height;
   min-width: $input-height;
   padding: 0;
 
   &.btn-sm {
-    width: $input-height-sm;
+    width: auto;
     height: $input-height-sm;
     min-width: $input-height-sm;
   }
 
   &.btn-xs {
-    width: $input-height-xs;
+    width: auto;
     height: $input-height-xs;
     min-width: $input-height-xs;
   }

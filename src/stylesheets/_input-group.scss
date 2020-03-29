@@ -26,12 +26,36 @@
 
 .input-group-search {
   .form-control {
-    padding-right: $input-height;
+    padding-left: 1.875rem;
+    @include transition($transition-base);
   }
 
+  .input-group-prepend,
   .input-group-append {
     position: absolute;
-    right: 0;
-    z-index: 3;
+    z-index: 4;
+    margin: 0;
+  }
+
+  .input-group-prepend,
+  .input-group-append {
+    left: 0;
+    @include transition($transition-fade);
+  }
+
+  & .input-group-prepend,
+  &.expand-search .input-group-append {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.expand-search .input-group-prepend,
+  & .input-group-append {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:not(.expand-search) .form-control-alt {
+    border-color: transparent;
   }
 }
