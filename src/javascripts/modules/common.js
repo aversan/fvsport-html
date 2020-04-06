@@ -222,6 +222,7 @@ $(() => {
       exitMenu: function() {
         $('.header-submenu-container').removeClass('show-submenu');
         $('.header-submenu-dropdown > .nav-link').removeClass('show-submenu');
+        return true;
       },
     });
 

@@ -3,7 +3,7 @@
 .sidebar {
   top: $header-navbar-height;
 
-  @include media-breakpoint-down('xl') {
+  @include media-breakpoint-down('lg') {
     top: $header-navbar-height-mobile;
   }
 

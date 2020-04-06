@@ -1,5 +1,8 @@
 html .freedeliveryfvsport {
   position: static;
+  font-family: 'Helvetica Neue',Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1.3rem;
 }
 
 html .dialog-window .dialog-close {
@@ -9,4 +12,88 @@ html .dialog-window .dialog-close {
 
 html .dialog-window .cart .dialog-close {
   margin-top: -10px;
+}
+
+html ul.thumbs li .list-brand-name {
+  font-weight: 600;
+}
+
+html .btb {
+  font-weight: 600;
+}
+
+html ul.thumbs li h5 {
+  text-align: center;
+}
+
+html .filters {
+  font-size: 14px;
+
+  h5 {
+    font-size: 1.1em;
+  }
+}
+
+html ul.thumbs li .i-w {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  top: 20px;
+
+  .o-w {
+    position: static !important;
+  }
+
+  .p-w {
+    position: static !important;
+  }
+}
+
+html ul.thumbs li h5 {
+  height: 24px;
+  max-height: 24px;
+  line-height: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+html ul.thumbs .rating,
+html ul.thumbs .offers {
+  text-align: center;
+}
+
+html .filters {
+  width: 270px;
+}
+
+html .page-content {
+  padding-top: 35px;
+  padding-bottom: 0;
+}
+
+html .related {
+  max-width: 732px;
+
+  h3 {
+    font-weight: 700;
+  }
+}
+
+html .reviews {
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  p a {
+    text-decoration: underline;
+    font-weight: 700;
+  }
 }

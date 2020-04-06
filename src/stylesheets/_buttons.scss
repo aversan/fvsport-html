@@ -1,4 +1,6 @@
 .btn {
+  overflow: hidden;
+
   @media screen and (prefers-reduced-motion: reduce) {
     & {
       transition: none;
@@ -9,7 +11,10 @@
     @include font-size(.875rem);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    overflow: hidden;
+  }
+
+  &.btn-lg {
+    line-height: 1.45;
   }
 }
 
@@ -29,18 +34,23 @@
   width: auto;
   height: $input-height;
   min-width: $input-height;
-  padding: 0;
+  padding-left: $input-padding-y;
+  padding-right: $input-padding-y;
 
   &.btn-sm {
     width: auto;
     height: $input-height-sm;
     min-width: $input-height-sm;
+    padding-left: $input-padding-y-sm;
+    padding-right: $input-padding-y-sm;
   }
 
   &.btn-xs {
     width: auto;
     height: $input-height-xs;
     min-width: $input-height-xs;
+    padding-left: $input-padding-y-xs;
+    padding-right: $input-padding-y-xs;
   }
 }
 
